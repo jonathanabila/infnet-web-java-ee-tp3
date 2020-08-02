@@ -1,6 +1,8 @@
+<%@ page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <style>
+        <style type="text/css">
             form {
                 margin: 0 auto;
                 width: 400px;
@@ -38,7 +40,7 @@
         <title>TP1 - INFNET</title>
     </head>
     <body>
-        <form>
+        <form action="AddUser" method="POST">
             <ul>
                 <li>
                     <label for="name">Nome:</label>
@@ -46,7 +48,7 @@
                 </li>
                 <li>
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="user_email">
+                    <input type="text" id="email" name="user_email">
                 </li>
                 <li>
                     <label for="password">Senha:</label>
