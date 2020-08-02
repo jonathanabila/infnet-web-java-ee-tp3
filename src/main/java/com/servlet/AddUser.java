@@ -29,9 +29,9 @@ public class AddUser extends HttpServlet {
     }
 
     private void doPostAndRespond(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        String name = request.getParameter("user_name");
+        String email = request.getParameter("user_email");
+        String password = request.getParameter("user_password");
 
         new UserDAO().SignUp(name, email, password);
 
