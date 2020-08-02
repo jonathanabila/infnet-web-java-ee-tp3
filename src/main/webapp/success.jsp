@@ -12,5 +12,9 @@
     </head>
     <body>
         <h2>Usuário cadastrado com sucesso!</h2>
+    <ul>
+        <li>Nome: ${name}</li>
+        <li>E-mail: ${email}</li>
+    </ul>
     </body>
 </html>

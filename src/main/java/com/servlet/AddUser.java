@@ -22,5 +22,9 @@ public class AddUser extends HttpServlet {
         String password = request.getParameter("user_password");
 
         new UserDAO().SignUp(name, email, password);
+
+        request.setAttribute("name", name);
+        request.setAttribute("email", email);
+        request.getRequestDispatcher("/success.jsp").forward(request, response);
     }
 }
