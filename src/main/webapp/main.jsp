@@ -9,9 +9,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .container-git p {
+            font-size: 20px;
+        }
+    </style>
     <title>Main</title>
 </head>
-<body>
-    <h2>Main</h2>
-</body>
+    <body>
+        <div class="container">
+            <h2>Main</h2>
+            <div class="container-git">
+                <p>
+                    Link: <a href="https://github.com/jonathanabila/infnet-web-java-ee-tp3">https://github.com/jonathanabila/infnet-web-java-ee-tp3</a>
+                </p>
+                <p>
+                    Aluno: Jonathan Abila
+                </p>
+                <p>
+                    Curso: Engenharia de Software
+                </p>
+            </div>
+        </div>
+    </body>
 </html>
