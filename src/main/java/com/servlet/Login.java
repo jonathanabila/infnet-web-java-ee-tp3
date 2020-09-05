@@ -16,6 +16,7 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getParameter("button-signup") != null) {
             response.sendRedirect("signup.jsp");
+            return;
         }
 
         String email = request.getParameter("user_email");
