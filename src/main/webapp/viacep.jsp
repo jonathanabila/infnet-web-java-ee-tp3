@@ -43,7 +43,7 @@
     <body>
         <div class="container">
             <h2>CEP</h2>
-            <form action="SearchCep" method="post">
+            <form action="viacep" method="post">
                 <div class="container-line">
                     <label for="cep">CEP:</label>
                     <input type="text" id="cep" name="cep">

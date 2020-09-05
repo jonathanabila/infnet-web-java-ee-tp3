@@ -52,7 +52,7 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="Login" method="post">
+        <form action="login" method="post">
             <div class="container-line">
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="user_email">
