@@ -1,6 +1,6 @@
 package com.Middlewares;
 
-import main.java.com.Utils.Utils;
+import com.Utils.Utils;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
