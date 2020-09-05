@@ -21,6 +21,9 @@
             align-items: center;
             flex-direction: column;
         }
+        .container-button {
+            margin-bottom: 20px;
+        }
         form {
             margin: 0 auto;
             width: 400px;
@@ -40,10 +43,13 @@
     <body>
         <div class="container">
             <h2>CEP</h2>
-            <form action="viacep.jsp" method="post">
+            <form action="SearchCep" method="post">
                 <div class="container-line">
                     <label for="cep">CEP:</label>
                     <input type="text" id="cep" name="cep">
+                </div>
+                <div class="container-button">
+                    <button type="submit">Consultar</button>
                 </div>
                 <div class="container-line">
                     <label for="street">Rua:</label>

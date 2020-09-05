@@ -47,12 +47,12 @@
 
 
   <servlet>
-    <servlet-name>CEP</servlet-name>
-    <servlet-class>com.servlet.CEP</servlet-class>
+    <servlet-name>SearchCep</servlet-name>
+    <servlet-class>com.servlet.SearchCep</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>CEP</servlet-name>
+    <servlet-name>SearchCep</servlet-name>
     <url-pattern>/viacep</url-pattern>
   </servlet-mapping>
 
