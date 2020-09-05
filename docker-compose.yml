@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  database:
+    image: postgres:12.3
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - tp_db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - tp_net
+
+volumes:
+  tp_db_data:
+
+networks:
+  tp_net:
+    driver: bridge
