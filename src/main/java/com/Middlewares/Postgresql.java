@@ -23,18 +23,17 @@ public class Postgresql {
         }
     }
 
-    public ResultSet runSelect(String SQL) {
+    public ResultSet runSelect(String SQL) throws SQLException {
         try {
             Statement stmt = connection.createStatement();
             return stmt.executeQuery(SQL);
         } catch (SQLException ex) {
             System.out.println("Unable to perform the query!");
-            System.out.println(ex.getMessage());
+            throw new SQLException(ex);
         }
-        return null;
     }
 
-    private Long runInsert(PreparedStatement pstmt) {
+    public Long runInsert(PreparedStatement pstmt) {
         long id = 0;
         try {
             int affectedRows = pstmt.executeUpdate();

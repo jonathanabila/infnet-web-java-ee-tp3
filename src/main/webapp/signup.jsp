@@ -9,7 +9,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Login</title>
+    <title>Cadastre-se</title>
 
     <style type="text/css">
         .container {
@@ -52,7 +52,7 @@
 <body>
 <div class="container">
     <h2>Cadastre-se</h2>
-    <form action="signup.jsp" method="post">
+    <form action="signup" method="post">
         <div class="container-line">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="user_name">
