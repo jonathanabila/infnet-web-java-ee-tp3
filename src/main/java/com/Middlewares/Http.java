@@ -50,7 +50,7 @@ public class Http {
         con.disconnect();
     }
 
-    public static void GET(String url) throws IOException {
+    public static String GET(String url) throws IOException {
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
@@ -69,9 +69,10 @@ public class Http {
             }
             in.close();
 
-            System.out.println(response.toString());
+            return response.toString();
         } else {
             System.out.println("GET request not worked");
         }
+        return null;
     }
 }
