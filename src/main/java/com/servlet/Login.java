@@ -8,7 +8,11 @@ import java.io.IOException;
 
 public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (request.getParameter("button-signup") != null) {
+            response.sendRedirect("signup.jsp");
+        }
 
+//        TODO: Perform Login
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

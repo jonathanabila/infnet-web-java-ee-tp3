@@ -52,7 +52,7 @@
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="login.jsp" method="get">
+        <form action="Login" method="post">
             <div class="container-line">
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="user_email">
@@ -61,11 +61,8 @@
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="user_password">
             </div>
-
-
-            <button type="submit">Entrar</button>
-
-            <button type="submit">Cadastrar-se</button>
+            <button type="submit" name="button-login" value="login">Entrar</button>
+            <button type="submit" name="button-signup" value="signup">Cadastrar-se</button>
         </form>
     </div>
 </body>
