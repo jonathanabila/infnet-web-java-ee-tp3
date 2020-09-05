@@ -1,62 +1,72 @@
-<%@ page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%--
+  Created by IntelliJ IDEA.
+  User: jonathan
+  Date: 05/09/2020
+  Time: 11:58
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <style type="text/css">
-            form {
-                margin: 0 auto;
-                width: 400px;
-                padding: 1em;
-                border: 1px solid #CCC;
-                border-radius: 1em;
-            }
+<head>
+    <title>Login</title>
 
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-            }
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
 
-            form li + li {
-                margin-top: 1em;
-            }
+        .container-line {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-            label {
-                display: inline-block;
-                width: 90px;
-                text-align: right;
-            }
+        form {
+            margin: 0 auto;
+            width: 400px;
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-            .button {
-                padding-left: 90px;
-            }
+        input {
+            margin: 10px 10px;
+        }
 
-            button {
-                margin-left: .5em;
-            }
-        </style>
-        <title>SignUp</title>
-    </head>
-    <body>
-        <form action="AddUser" method="POST">
-            <ul>
-                <li>
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="user_name">
-                </li>
-                <li>
-                    <label for="email">E-mail:</label>
-                    <input type="text" id="email" name="user_email">
-                </li>
-                <li>
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="user_password">
-               </li>
-                <li class="button">
-                    <button type="submit">Cadastrar</button>
-                </li>
-            </ul>
-        </form>
-    </body>
+        button {
+            margin: 10px;
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Cadastre-se</h2>
+    <form action="signup.jsp" method="post">
+        <div class="container-line">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="user_name">
+        </div>
+        <div class="container-line">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="user_email">
+        </div>
+        <div class="container-line">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="user_password">
+        </div>
+        <button type="submit">Cadastrar-se</button>
+    </form>
+</div>
+</body>
 </html>
