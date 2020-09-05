@@ -36,6 +36,10 @@
                     Curso: Engenharia de Software
                 </p>
             </div>
+            <div>
+                Serviços
+                    <p><a href="viacep.jsp">Consulta por CEP</a></p>
+            </div>
         </div>
     </body>
 </html>

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.Models.CepModel" %><%--
   Created by IntelliJ IDEA.
   User: jonathan
   Date: 05/09/2020
@@ -49,28 +49,46 @@
                     <input type="text" id="cep" name="cep">
                 </div>
                 <div class="container-button">
-                    <button type="submit">Consultar</button>
+                    <%
+                        String buttonText;
+                        if(request.getAttribute("cepModel") != null) {
+                            buttonText = "Reconsultar";
+                        } else {
+                            buttonText = "Consultar";
+                        }
+                        {%><button type="submit"><%=buttonText%></button><%}
+                    %>
                 </div>
-                <div class="container-line">
-                    <label for="street">Rua:</label>
-                    <input name="street" type="text" id="street" readonly="readonly"/>
-                </div>
-                <div class="container-line">
-                    <label for="neighborhood">Bairro:</label>
-                    <input name="neighborhood" type="text" id="neighborhood" readonly="readonly"/>
-                </div>
-                <div class="container-line">
-                    <label for="city">Cidade:</label>
-                    <input name="city" type="text" id="city" readonly="readonly"/>
-                </div>
-                <div class="container-line">
-                    <label for="state">Estado:</label>
-                    <input name="state" type="text" id="state" readonly="readonly"/>
-                </div>
-                <div class="container-line">
-                    <label for="ibge">IBGE: </label>
-                    <input name="ibge" type="text" id="ibge" readonly="readonly"/>
-                </div>
+
+                <%
+                    if(request.getAttribute("cepModel") != null) {
+                        CepModel cep = (CepModel) request.getAttribute("cepModel");
+                        {%>
+                            <div>
+                                <div class="container-line">
+                                    <label for="street">Rua:</label>
+                                    <input name="street" value="<%=cep.getStreet()%>" type="text" id="street" readonly="readonly"/>
+                                </div>
+                                <div class="container-line">
+                                    <label for="neighborhood">Bairro:</label>
+                                    <input name="neighborhood" value="<%=cep.getNeighborhood()%>" type="text" id="neighborhood" readonly="readonly"/>
+                                </div>
+                                <div class="container-line">
+                                    <label for="city">Cidade:</label>
+                                    <input name="city" value="<%=cep.getCity()%>" type="text" id="city" readonly="readonly"/>
+                                </div>
+                                <div class="container-line">
+                                    <label for="state">Estado:</label>
+                                    <input name="state" value="<%=cep.getState()%>" type="text" id="state" readonly="readonly"/>
+                                </div>
+                                <div class="container-line">
+                                    <label for="ibge">IBGE: </label>
+                                    <input name="ibge" value="<%=cep.getIBGE()%>" type="text" id="ibge" readonly="readonly"/>
+                                </div>
+                            </div>
+                        <%}
+                    }
+               %>
             </form>
         </div>
     </body>
