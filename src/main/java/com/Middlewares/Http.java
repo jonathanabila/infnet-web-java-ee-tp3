@@ -1,4 +1,4 @@
-package main.java.com.Middlewares;
+package com.Middlewares;
 
 import main.java.com.Utils.Utils;
 
@@ -31,7 +31,7 @@ public class Http {
 
         int responseCode = con.getResponseCode();
 
-        if (responseCode == HttpURLConnection.HTTP_OK) { //success
+        if (responseCode == HttpURLConnection.HTTP_OK) {
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     con.getInputStream()));
             String inputLine;
@@ -48,5 +48,30 @@ public class Http {
         }
 
         con.disconnect();
+    }
+
+    public static void GET(String url) throws IOException {
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+        con.setRequestMethod("GET");
+        con.setRequestProperty("User-Agent", "Java");
+
+        int responseCode = con.getResponseCode();
+
+        if (responseCode == HttpURLConnection.HTTP_OK) {
+            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuilder response = new StringBuilder();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            System.out.println(response.toString());
+        } else {
+            System.out.println("GET request not worked");
+        }
     }
 }

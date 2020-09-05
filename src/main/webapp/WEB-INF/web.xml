@@ -2,18 +2,82 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
-  <display-name>TP1 - Jonathan Tolentino Abila</display-name>
+<web-app
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+
+  <display-name>TP3</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
 
   <servlet>
-    <servlet-name>AddUser</servlet-name>
-    <servlet-class>main.java.com.servlet.AddUser</servlet-class>
+    <servlet-name>Signup</servlet-name>
+    <servlet-class>com.servlet.SignUp</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>AddUser</servlet-name>
+    <servlet-name>Signup</servlet-name>
+    <url-pattern>/signup</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.servlet.Login</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Main</servlet-name>
+    <servlet-class>com.servlet.Main</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Main</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>CEP</servlet-name>
+    <servlet-class>com.servlet.CEP</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CEP</servlet-name>
+    <url-pattern>/viacep</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>Searchly</servlet-name>
+    <servlet-class>com.servlet.Searchly</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Searchly</servlet-name>
+    <url-pattern>/searchly</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>CoinGecko</servlet-name>
+    <servlet-class>com.servlet.CoinGecko</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>CoinGecko</servlet-name>
+    <url-pattern>/coingecko</url-pattern>
+  </servlet-mapping>
+
 
   <error-page>
     <error-code>404</error-code>

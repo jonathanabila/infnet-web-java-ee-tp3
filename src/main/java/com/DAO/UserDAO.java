@@ -1,6 +1,6 @@
-package main.java.com.DAO;
+package com.DAO;
 
-import main.java.com.Middlewares.Http;
+import com.Middlewares.Http;
 
 import java.io.IOException;
 import java.util.HashMap;

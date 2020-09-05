@@ -36,8 +36,7 @@
                 margin-left: .5em;
             }
         </style>
-
-        <title>TP1 - INFNET</title>
+        <title>SignUp</title>
     </head>
     <body>
         <form action="AddUser" method="POST">
@@ -55,7 +54,7 @@
                     <input type="password" id="password" name="user_password">
                </li>
                 <li class="button">
-                    <button type="submit">Salvar</button>
+                    <button type="submit">Cadastrar</button>
                 </li>
             </ul>
         </form>
