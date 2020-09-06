@@ -18,5 +18,6 @@ Local Address:
 ### Microservices:
 
  - https://viacep.com.br/ (Mandatory)
- - https://searchly.asuarez.dev/docs/v1#tag/song
+ - https://searchly.asuarez.dev/docs/v1#tag/song (DEPRECATED)
  - https://www.coingecko.com/en/api#
+ - https://garbage.world/posts/libgen/

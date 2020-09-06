@@ -58,13 +58,13 @@
 
 
   <servlet>
-    <servlet-name>Searchly</servlet-name>
-    <servlet-class>com.servlet.Searchly</servlet-class>
+    <servlet-name>Pokemon</servlet-name>
+    <servlet-class>com.servlet.Pokemon</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>Searchly</servlet-name>
-    <url-pattern>/searchly</url-pattern>
+    <servlet-name>Pokemon</servlet-name>
+    <url-pattern>/pokemon</url-pattern>
   </servlet-mapping>
 
 

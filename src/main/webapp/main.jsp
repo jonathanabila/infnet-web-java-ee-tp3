@@ -43,6 +43,10 @@
                         {%>
                             <p>Bem vindo <%=userModel.name%>!</p>
                         <%}
+                    } else {
+                        {%>
+                            <b><p>Você não está logado!</p></b>
+                        <%}
                     }
                 %>
             </div>
@@ -50,6 +54,7 @@
                 Serviços
                     <p><a href="viacep.jsp">Consulta por CEP</a></p>
                     <p><a href="coingecko.jsp">Consulta de Bitcoins</a></p>
+                    <p><a href="pokemon.jsp">Consulta de Pokemons</a></p>
             </div>
         </div>
     </body>
