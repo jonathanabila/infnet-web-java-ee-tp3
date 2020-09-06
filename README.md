@@ -3,12 +3,10 @@
  - docker-compose
 
 
-### How to execute the project
+### How to start up the project
  - `docker-compose up`
-
-Starting up command:
-
-`tomcat7:run`
+ - `./database/initialize-database.sh`
+ - `tomcat7:run`
 
 Local Address:
 
