@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.Models.UserModel" %><%--
   Created by IntelliJ IDEA.
   User: jonathan
   Date: 05/09/2020
@@ -35,6 +35,16 @@
                 <p>
                     Curso: Engenharia de Software
                 </p>
+            </div>
+            <div>
+                <%
+                    if(request.getAttribute("userModel") != null) {
+                        UserModel userModel = (UserModel) request.getAttribute("userModel");
+                        {%>
+                            <p>Bem vindo <%=userModel.name%>!</p>
+                        <%}
+                    }
+                %>
             </div>
             <div>
                 Serviços

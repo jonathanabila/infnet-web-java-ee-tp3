@@ -1,5 +1,6 @@
 package com.servlet;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+import com.Models.UserModel;
 import com.Services.LoginService;
 
 public class Login extends HttpServlet {
@@ -25,7 +27,11 @@ public class Login extends HttpServlet {
         try {
             if (loginService.userExists(email)) {
                 if(loginService.isEmailAndPasswordCorrect(email, password)) {
-                    response.sendRedirect("main.jsp");
+                    UserModel userModel  = loginService.getUser(email);
+
+                    request.setAttribute("userModel", userModel);
+                    RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
+                    rd.forward(request, response);
                 } else {
                     PrintWriter out = response.getWriter();
                     out.println("<script type=\"text/javascript\">");
