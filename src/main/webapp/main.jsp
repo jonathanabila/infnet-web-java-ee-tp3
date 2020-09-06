@@ -49,6 +49,7 @@
             <div>
                 Serviços
                     <p><a href="viacep.jsp">Consulta por CEP</a></p>
+                    <p><a href="coingecko.jsp">Consulta de Bitcoins</a></p>
             </div>
         </div>
     </body>
